@@ -1,0 +1,2 @@
+在操作数据库时，在dao层遇到sql.ErrNoRows时，需要Wrap 住该错误，抛给上层。 
+如果不Wrap，日志输出中信息是：sql: no rows in result set，这一段信息无法准确判断到错误在哪，需要将错误包装一下，加上堆栈和sql信息。
